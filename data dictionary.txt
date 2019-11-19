@@ -1,0 +1,770 @@
+--------------------------------------------------------------------------------
+Codebook for Social Explorer report ID: R12383874
+--------------------------------------------------------------------------------
+
+Contents
+    - Table Summary
+    - Data Dictionary
+    - Citation and Use
+
+
+--------------------------------------------------------------------------------
+Table Summary
+--------------------------------------------------------------------------------
+ 
+Survey:           ACS 2017 (5-Year Estimates)
+Dataset:          Social Explorer Tables:  ACS 2017 (5-Year Estimates)
+Tables:
+
+      1. Total Population
+         Universe:  Total Population
+         Name:      A00001
+         Variables:
+            A00001_001:   Total Population
+
+
+      2. Population Density (Per Sq. Mile)
+         Universe:  Total Population
+         Name:      A00002
+         Variables:
+            A00002_001:   Total Population
+            A00002_002:   Population Density (Per Sq. Mile)
+            A00002_003:   Area (Land)
+
+
+      3. Households by Household Type
+         Universe:  Households
+         Name:      A10008
+         Variables:
+            A10008_001:   Households:
+            A10008_002:      Family Households:
+            A10008_003:         Married-Couple Family
+            A10008_004:         Other Family:
+            A10008_005:            Male Householder, No Wife Present
+            A10008_006:            Female Householder, No Husband Present
+            A10008_007:      Nonfamily Households:
+            A10008_008:         Male Householder
+            A10008_009:         Female Householder
+
+
+      4. Households by Presence of People Under 18 Years by Household Type
+         Universe:  Households
+         Name:      A10009
+         Variables:
+            A10009_001:   Households:
+            A10009_002:      Households with One or More People Under 18 Years:
+            A10009_003:         Family Households:
+            A10009_004:            Married-Couple Family
+            A10009_005:            Other Family (Single Parent):
+            A10009_006:               Male Householder, No Wife Present
+            A10009_007:               Female Householder, No Husband Present
+            A10009_008:         Nonfamily Households:
+            A10009_009:            Male Householder
+            A10009_010:            Female Householder
+            A10009_011:      Households with No People Under 18 Years:
+            A10009_012:         Family Households:
+            A10009_013:            Married-Couple Family
+            A10009_014:            Other Family:
+            A10009_015:               Male Householder, No Wife Present
+            A10009_016:               Female Householder, No Husband Present
+            A10009_017:         Nonfamily Households:
+            A10009_018:            Male Householder
+            A10009_019:            Female Householder
+
+
+      5. Marital Status for the Population 15 Years and Over
+         Universe:  Population 15 Years and Over
+         Name:      A11001
+         Variables:
+            A11001_001:   Population 15 Years and Over:
+            A11001_002:      Never Married
+            A11001_003:      Now Married (Not Including Separated)
+            A11001_004:      Separated
+            A11001_005:      Widowed
+            A11001_006:      Divorced
+
+
+      6. Unmarried-Partner Households by Sex of Partners
+         Universe:  Households
+         Name:      A11002
+         Variables:
+            A11002_001:   Households
+            A11002_002:      Unmarried-Partner Households:
+            A11002_003:         Same Sex Partners:
+            A11002_004:            Male Householder and Male Partner
+            A11002_005:            Female Householder and Female Partner
+            A11002_006:         Opposite Sex Partners:
+            A11002_007:            Male Householder and Female Partner
+            A11002_008:            Female Householder and Male Partner
+            A11002_009:      All Other Households
+
+
+      7. Group Quarters Population
+         Universe:  Total Population
+         Name:      A19001
+         Variables:
+            A19001_001:   Total Population:
+            A19001_002:      Population in Group Quarters
+            A19001_003:      Population Not in Group Quarters
+
+
+      8. Household Income (In <DollarYear> Inflation Adjusted Dollars)
+         Universe:  Households
+         Name:      A14001
+         Variables:
+            A14001_001:   Households:
+            A14001_002:      Less than $10,000
+            A14001_003:      $10,000 to $14,999
+            A14001_004:      $15,000 to $19,999
+            A14001_005:      $20,000 to $24,999
+            A14001_006:      $25,000 to $29,999
+            A14001_007:      $30,000 to $34,999
+            A14001_008:      $35,000 to $39,999
+            A14001_009:      $40,000 to $44,999
+            A14001_010:      $45,000 to $49,999
+            A14001_011:      $50,000 to $59,999
+            A14001_012:      $60,000 to $74,999
+            A14001_013:      $75,000 to $99,999
+            A14001_014:      $100,000 to $124,999
+            A14001_015:      $125,000 to $149,999
+            A14001_016:      $150,000 to $199,999
+            A14001_017:      $200,000 or More
+
+
+      9. Median Household Income (In <DollarYear> Inflation Adjusted Dollars)
+         Universe:  Households
+         Name:      A14006
+         Variables:
+            A14006_001:   Median Household Income (In 2017 Inflation Adjusted Dollars)
+
+
+      10. Median Household Income by Race (In <DollarYear> Inflation Adjusted Dollars)
+          Universe:  Households
+          Name:      A14007
+          Variables:
+             A14007_001:   Median Household Income (In 2017 Inflation Adjusted Dollars):
+             A14007_002:      White Alone Householder
+             A14007_003:      Black or African American Alone Householder
+             A14007_004:      American Indian and Alaska Native Alone  Householder
+             A14007_005:      Asian Alone
+             A14007_006:      Native Hawaiian and Other Pacific Islander Alone  Householder
+             A14007_007:      Some Other Race Alone Householder
+             A14007_008:      Two or More Races Householder
+             A14007_009:      Hispanic or Latino Householder
+             A14007_010:      White Alone Householder, Not Hispanic or Latino
+
+
+      11. Average Household Income (In <DollarYear> Inflation Adjusted Dollars)
+          Universe:  Households
+          Name:      A14008
+          Variables:
+             A14008_001:   Average Household Income (In 2017 Inflation Adjusted Dollars)
+
+
+      12. Median Family Income (In <DollarYear> Inflation Adjusted Dollars)
+          Universe:  Families
+          Name:      A14010
+          Variables:
+             A14010_001:   Median Family Income (In 2017 Inflation Adjusted Dollars)
+
+
+      13. Average Family Income (In <DollarYear> Inflation Adjusted Dollars)
+          Universe:  Families
+          Name:      A14011
+          Variables:
+             A14011_001:   Average Family Income (In 2017 Inflation Adjusted Dollars)
+
+
+      14. Median Nonfamily Household Income (In <DollarYear> Inflation Adjusted Dollars)
+          Universe:  Nonfamily Households
+          Name:      A14012
+          Variables:
+             A14012_001:   Median Nonfamily Household Income (In 2017 Inflation Adjusted Dollars)
+
+
+      15. Average Nonfamily Income (In <DollarYear> Inflation Adjusted Dollars)
+          Universe:  Nonfamily Households
+          Name:      A14013
+          Variables:
+             A14013_001:   Average Nonfamily Income (In 2017 Inflation Adjusted Dollars)
+
+
+      16. Median Income by Sex by Work Experience (In <DollarYear> Inflation Adjusted Dollars) (For Population Age 15+)
+          Universe:  Population 15 years and Over with income in the past 12 months
+          Name:      A14014
+          Variables:
+             A14014_001:   Median Income for Population 15 Years and Over:
+             A14014_002:      Male:
+             A14014_003:         Worked Full-Time, Year-Round in the Past 12 Months
+             A14014_004:         Other
+             A14014_005:      Female:
+             A14014_006:         Worked Full-Time, Year-Round in the Past 12 Months
+             A14014_007:         Other
+
+
+      17. Median Earnings by Sex by Educational Attainment (In <DollarYear> Inflation Adjusted Dollars) (For Population Age 25+)
+          Universe:  Population 25 years and Over with earnings
+          Name:      A15001
+          Variables:
+             A15001_001:   Median Earnings:
+             A15001_002:      Less than High School Graduate
+             A15001_003:      High School Graduate (Includes Equivalency)
+             A15001_004:      Some College or Associate's Degree
+             A15001_005:      Bachelor's Degree
+             A15001_006:      Graduate or Professional Degree
+             A15001_007:      Male:
+             A15001_008:         Less than High School Graduate
+             A15001_009:         High School Graduate (Includes Equivalency)
+             A15001_010:         Some College or Associate's Degree
+             A15001_011:         Bachelor's Degree
+             A15001_012:         Graduate or Professional Degree
+             A15001_013:      Female:
+             A15001_014:         Less than High School Graduate
+             A15001_015:         High School Graduate (Includes Equivalency)
+             A15001_016:         Some College or Associate's Degree
+             A15001_017:         Bachelor's Degree
+             A15001_018:         Graduate or Professional Degree
+
+
+      18. Median Household Income by Tenure (In <DollarYear> Inflation Adjusted Dollars)
+          Universe:  Occupied housing units
+          Name:      A14015
+          Variables:
+             A14015_001:   Median Household Income Occupied Housing Units:
+             A14015_002:      Owner Occupied
+             A14015_003:      Renter Occupied
+
+
+      19. Households with Earnings
+          Universe:  Households
+          Name:      A10011
+          Variables:
+             A10011_001:   Households:
+             A10011_002:      With Earnings
+             A10011_003:      No Earnings
+
+
+      20. Households with Wage or Salary Income
+          Universe:  Households
+          Name:      A10019
+          Variables:
+             A10019_001:   Households:
+             A10019_002:      With Wage or Salary Income
+             A10019_003:      No Wage or Salary Income
+
+
+      21. Households with Self-Employment Income
+          Universe:  Households
+          Name:      A10016
+          Variables:
+             A10016_001:   Households:
+             A10016_002:      With Self-Employment Income
+             A10016_003:      No Self-Employment Income
+
+
+      22. Households with Interest, Dividends, or Net Rental Income
+          Universe:  Households
+          Name:      A10012
+          Variables:
+             A10012_001:   Households:
+             A10012_002:      With Interest, Dividends, or Net Rental Income
+             A10012_003:      No Interest, Dividends, or Net Rental Income
+
+
+      23. Households with Social Security Income
+          Universe:  Households
+          Name:      A10017
+          Variables:
+             A10017_001:   Households:
+             A10017_002:      With Social Security Income
+             A10017_003:      No Social Security Income
+
+
+      24. Households with Supplemental Security Income (Ssi)
+          Universe:  Households
+          Name:      A10018
+          Variables:
+             A10018_001:   Households:
+             A10018_002:      With Supplemental Security Income (Ssi)
+             A10018_003:      No Supplemental Security Income (Ssi)
+
+
+      25. Households with Public Assistance Income
+          Universe:  Households
+          Name:      A10014
+          Variables:
+             A10014_001:   Households:
+             A10014_002:      With Public Assistance Income
+             A10014_003:      No Public Assistance Income
+
+
+      26. Households with Retirement Income
+          Universe:  Households
+          Name:      A10015
+          Variables:
+             A10015_001:   Households:
+             A10015_002:      With Retirement Income
+             A10015_003:      No Retirement Income
+
+
+      27. Households with Other Types of Income
+          Universe:  Households
+          Name:      A10013
+          Variables:
+             A10013_001:   Households:
+             A10013_002:      With Other Types of Income
+             A10013_003:      No Other Types of Income
+
+
+      28. Per Capita Income (In <DollarYear> Inflation Adjusted Dollars)
+          Universe:  Total Population
+          Name:      A14024
+          Variables:
+             A14024_001:   Per Capita Income (In 2017 Inflation Adjusted Dollars)
+
+
+      29. Per Capita Income (In <DollarYear> Inflation Adjusted Dollars) (White Alone)
+          Universe:  White Alone Population
+          Name:      A14024A
+          Variables:
+             A14024A_001:   Per Capita Income (In 2017 Inflation Adjusted Dollars)
+
+
+      30. Per Capita Income (In <DollarYear> Inflation Adjusted Dollars) (Black or African American Alone)
+          Universe:  Black or African American Alone Population
+          Name:      A14024B
+          Variables:
+             A14024B_001:   Per Capita Income (In 2017 Inflation Adjusted Dollars)
+
+
+      31. Per Capita Income (In <DollarYear> Inflation Adjusted Dollars) (American Indian and Alaska Native Alone)
+          Universe:  American Indian and Alaska Native Alone Population
+          Name:      A14024C
+          Variables:
+             A14024C_001:   Per Capita Income (In 2017 Inflation Adjusted Dollars)
+
+
+      32. Per Capita Income (In <DollarYear> Inflation Adjusted Dollars) (Asian Alone)
+          Universe:  Asian Alone Population
+          Name:      A14024D
+          Variables:
+             A14024D_001:   Per Capita Income (In 2017 Inflation Adjusted Dollars)
+
+
+      33. Per Capita Income (In <DollarYear> Inflation Adjusted Dollars) (Native Hawaiian and Other Pacific Islander Alone)
+          Universe:  Native Hawaiian and Other Pacific Islander Alone Population
+          Name:      A14024E
+          Variables:
+             A14024E_001:   Per Capita Income (In 2017 Inflation Adjusted Dollars)
+
+
+      34. Per Capita Income (In <DollarYear> Inflation Adjusted Dollars) (Some Other Race Alone)
+          Universe:  Some Other Race Alone Population
+          Name:      A14024F
+          Variables:
+             A14024F_001:   Per Capita Income (In 2017 Inflation Adjusted Dollars)
+
+
+      35. Per Capita Income (In <DollarYear> Inflation Adjusted Dollars) (Two or More Races)
+          Universe:  Two or More Races Population
+          Name:      A14024G
+          Variables:
+             A14024G_001:   Per Capita Income (In 2017 Inflation Adjusted Dollars)
+
+
+      36. Per Capita Income (In <DollarYear> Inflation Adjusted Dollars) (Hispanic or Latino)
+          Universe:  Hispanic or Latino Population
+          Name:      A14024H
+          Variables:
+             A14024H_001:   Per Capita Income (In 2017 Inflation Adjusted Dollars)
+
+
+      37. Per Capita Income (In <DollarYear> Inflation Adjusted Dollars) (White Alone, Not Hispanic or Latino)
+          Universe:  White Alone, not Hispanic or Latino Population
+          Name:      A14024I
+          Variables:
+             A14024I_001:   Per Capita Income (In 2017 Inflation Adjusted Dollars)
+
+
+      38. Means of Transportation to Work for Workers 16 Years and Over
+          Universe:  Workers 16 Years and Over
+          Name:      A09005
+          Variables:
+             A09005_001:   Workers 16 Years and Over:
+             A09005_002:      Car, Truck, or Van
+             A09005_009:         Drove Alone
+             A09005_010:         Carpooled
+             A09005_003:      Public Transportation (Includes Taxicab)
+             A09005_004:      Motorcycle
+             A09005_005:      Bicycle
+             A09005_006:      Walked
+             A09005_007:      Other Means
+             A09005_008:      Worked At Home
+
+
+      39. Travel Time to Work for Workers 16 Years and Over
+          Universe:  Workers 16 Years and Over
+          Name:      A09001
+          Variables:
+             A09001_001:   Workers 16 Years and Over:
+             A09001_002:      Did Not Work At Home:
+             A09001_003:         Less than 10 Minutes
+             A09001_004:         10 to 19 Minutes
+             A09001_005:         20 to 29 Minutes
+             A09001_006:         30 to 39 Minutes
+             A09001_007:         40 to 59 Minutes
+             A09001_008:         60 to 89 Minutes
+             A09001_009:         90 or More Minutes
+             A09001_010:      Worked At Home
+
+
+
+
+
+ 
+ 
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Variables 
+      FIPS:           FIPS
+      GEOID:          Geographic Identifier
+      NAME:           Name of Area
+      QName:          Qualifying Name
+      STUSAB:         State/U.S.-Abbreviation (USPS)
+      SUMLEV:         Summary Level
+      GEOCOMP:        Geographic Component
+      FILEID:         File Identification
+      LOGRECNO:       Logical Record Number
+      US:             US
+      REGION:         Region
+      DIVISION:       Division
+      STATECE:        State (Census Code)
+      STATE:          State (FIPS)
+      COUNTY:         County
+      COUSUB:         County Subdivision (FIPS)
+      PLACE:          Place (FIPS Code)
+      PLACESE:        Place (State FIPS + Place FIPS)
+      TRACT:          Census Tract
+      BLKGRP:         Block Group
+      CONCIT:         Consolidated City
+      AIANHH:         American Indian Area/Alaska Native Area/Hawaiian Home Land (Census)
+      AIANHHFP:       American Indian Area/Alaska Native Area/Hawaiian Home Land (FIPS)
+      AIHHTLI:        American Indian Trust Land/Hawaiian Home Land Indicator
+      AITSCE:         American Indian Tribal Subdivision (Census)
+      AITS:           American Indian Tribal Subdivision (FIPS)
+      ANRC:           Alaska Native Regional Corporation (FIPS)
+      CBSA:           Metropolitan and Micropolitan Statistical Area
+      CSA:            Combined Statistical Area
+      METDIV:         Metropolitan Division
+      MACC:           Metropolitan Area Central City
+      MEMI:           Metropolitan/Micropolitan Indicator Flag
+      NECTA:          New England City and Town Combined Statistical Area
+      CNECTA:         New England City and Town Area
+      NECTADIV:       New England City and Town Area Division
+      UA:             Urban Area
+      UACP:           Urban Area Central Place
+      CDCURR:         Current Congressional District ***
+      SLDU:           State Legislative District Upper
+      SLDL:           State Legislative District Lower
+      VTD:            Voting District
+      ZCTA3:          ZIP Code Tabulation Area (3-digit)
+      ZCTA5:          ZIP Code Tabulation Area (5-digit)
+      SUBMCD:         Subbarrio (FIPS)
+      SDELM:          School District (Elementary)
+      SDSEC:          School District (Secondary)
+      SDUNI:          School District (Unified)
+      UR:             Urban/Rural
+      PCI:            Principal City Indicator
+      TAZ:            Traffic Analysis Zone
+      UGA:            Urban Growth Area
+      BTTR:           Tribal Tract
+      BTBG:           Tribal Block Group
+      PUMA5:          Public Use Microdata Area - 5% File
+      PUMA1:          Public Use Microdata Area - 1% File
+      A00001_001:     Total Population
+      A00002_001:     Total Population
+      A00002_002:     Population Density (Per Sq. Mile)
+      A00002_003:     Area (Land)
+      A10008_001:     Households:
+      A10008_002:     Households: Family Households
+      A10008_003:     Households: Family Households: Married-Couple Family
+      A10008_004:     Households: Family Households: Other Family
+      A10008_005:     Households: Family Households: Other Family: Male Householder, No Wife Present
+      A10008_006:     Households: Family Households: Other Family: Female Householder, No Husband Present
+      A10008_007:     Households: Nonfamily Households
+      A10008_008:     Households: Nonfamily Households: Male Householder
+      A10008_009:     Households: Nonfamily Households: Female Householder
+      PCT_A10008_002: % Households: Family Households
+      PCT_A10008_003: % Households: Family Households: Married-Couple Family
+      PCT_A10008_004: % Households: Family Households: Other Family
+      PCT_A10008_005: % Households: Family Households: Other Family: Male Householder, No Wife Present
+      PCT_A10008_006: % Households: Family Households: Other Family: Female Householder, No Husband Present
+      PCT_A10008_007: % Households: Nonfamily Households
+      PCT_A10008_008: % Households: Nonfamily Households: Male Householder
+      PCT_A10008_009: % Households: Nonfamily Households: Female Householder
+      A10009_001:     Households:
+      A10009_002:     Households: Households with One or More People Under 18 Years
+      A10009_003:     Households: Households with One or More People Under 18 Years: Family Households
+      A10009_004:     Households: Households with One or More People Under 18 Years: Family Households: Married-Couple Family
+      A10009_005:     Households: Households with One or More People Under 18 Years: Family Households: Other Family (Single Parent)
+      A10009_006:     Households: Households with One or More People Under 18 Years: Family Households: Other Family (Single Parent): Male Householder, No Wife Present
+      A10009_007:     Households: Households with One or More People Under 18 Years: Family Households: Other Family (Single Parent): Female Householder, No Husband Present
+      A10009_008:     Households: Households with One or More People Under 18 Years: Nonfamily Households
+      A10009_009:     Households: Households with One or More People Under 18 Years: Nonfamily Households: Male Householder
+      A10009_010:     Households: Households with One or More People Under 18 Years: Nonfamily Households: Female Householder
+      A10009_011:     Households: Households with No People Under 18 Years
+      A10009_012:     Households: Households with No People Under 18 Years: Family Households
+      A10009_013:     Households: Households with No People Under 18 Years: Family Households: Married-Couple Family
+      A10009_014:     Households: Households with No People Under 18 Years: Family Households: Other Family
+      A10009_015:     Households: Households with No People Under 18 Years: Family Households: Other Family: Male Householder, No Wife Present
+      A10009_016:     Households: Households with No People Under 18 Years: Family Households: Other Family: Female Householder, No Husband Present
+      A10009_017:     Households: Households with No People Under 18 Years: Nonfamily Households
+      A10009_018:     Households: Households with No People Under 18 Years: Nonfamily Households: Male Householder
+      A10009_019:     Households: Households with No People Under 18 Years: Nonfamily Households: Female Householder
+      PCT_A10009_002: % Households: Households with One or More People Under 18 Years
+      PCT_A10009_003: % Households: Households with One or More People Under 18 Years: Family Households
+      PCT_A10009_004: % Households: Households with One or More People Under 18 Years: Family Households: Married-Couple Family
+      PCT_A10009_005: % Households: Households with One or More People Under 18 Years: Family Households: Other Family (Single Parent)
+      PCT_A10009_006: % Households: Households with One or More People Under 18 Years: Family Households: Other Family (Single Parent): Male Householder, No Wife Present
+      PCT_A10009_007: % Households: Households with One or More People Under 18 Years: Family Households: Other Family (Single Parent): Female Householder, No Husband Present
+      PCT_A10009_008: % Households: Households with One or More People Under 18 Years: Nonfamily Households
+      PCT_A10009_009: % Households: Households with One or More People Under 18 Years: Nonfamily Households: Male Householder
+      PCT_A10009_010: % Households: Households with One or More People Under 18 Years: Nonfamily Households: Female Householder
+      PCT_A10009_011: % Households: Households with No People Under 18 Years
+      PCT_A10009_012: % Households: Households with No People Under 18 Years: Family Households
+      PCT_A10009_013: % Households: Households with No People Under 18 Years: Family Households: Married-Couple Family
+      PCT_A10009_014: % Households: Households with No People Under 18 Years: Family Households: Other Family
+      PCT_A10009_015: % Households: Households with No People Under 18 Years: Family Households: Other Family: Male Householder, No Wife Present
+      PCT_A10009_016: % Households: Households with No People Under 18 Years: Family Households: Other Family: Female Householder, No Husband Present
+      PCT_A10009_017: % Households: Households with No People Under 18 Years: Nonfamily Households
+      PCT_A10009_018: % Households: Households with No People Under 18 Years: Nonfamily Households: Male Householder
+      PCT_A10009_019: % Households: Households with No People Under 18 Years: Nonfamily Households: Female Householder
+      A11001_001:     Population 15 Years and Over:
+      A11001_002:     Population 15 Years and Over: Never Married
+      A11001_003:     Population 15 Years and Over: Now Married (Not Including Separated)
+      A11001_004:     Population 15 Years and Over: Separated
+      A11001_005:     Population 15 Years and Over: Widowed
+      A11001_006:     Population 15 Years and Over: Divorced
+      PCT_A11001_002: % Population 15 Years and Over: Never Married
+      PCT_A11001_003: % Population 15 Years and Over: Now Married (Not Including Separated)
+      PCT_A11001_004: % Population 15 Years and Over: Separated
+      PCT_A11001_005: % Population 15 Years and Over: Widowed
+      PCT_A11001_006: % Population 15 Years and Over: Divorced
+      A11002_001:     Households
+      A11002_002:     Households: Unmarried-Partner Households
+      A11002_003:     Households: Unmarried-Partner Households: Same Sex Partners
+      A11002_004:     Households: Unmarried-Partner Households: Same Sex Partners: Male Householder and Male Partner
+      A11002_005:     Households: Unmarried-Partner Households: Same Sex Partners: Female Householder and Female Partner
+      A11002_006:     Households: Unmarried-Partner Households: Opposite Sex Partners
+      A11002_007:     Households: Unmarried-Partner Households: Opposite Sex Partners: Male Householder and Female Partner
+      A11002_008:     Households: Unmarried-Partner Households: Opposite Sex Partners: Female Householder and Male Partner
+      A11002_009:     Households: All Other Households
+      PCT_A11002_002: % Households: Unmarried-Partner Households
+      PCT_A11002_003: % Households: Unmarried-Partner Households: Same Sex Partners
+      PCT_A11002_004: % Households: Unmarried-Partner Households: Same Sex Partners: Male Householder and Male Partner
+      PCT_A11002_005: % Households: Unmarried-Partner Households: Same Sex Partners: Female Householder and Female Partner
+      PCT_A11002_006: % Households: Unmarried-Partner Households: Opposite Sex Partners
+      PCT_A11002_007: % Households: Unmarried-Partner Households: Opposite Sex Partners: Male Householder and Female Partner
+      PCT_A11002_008: % Households: Unmarried-Partner Households: Opposite Sex Partners: Female Householder and Male Partner
+      PCT_A11002_009: % Households: All Other Households
+      A19001_001:     Total Population:
+      A19001_002:     Total Population: Population in Group Quarters
+      A19001_003:     Total Population: Population Not in Group Quarters
+      PCT_A19001_002: % Total Population: Population in Group Quarters
+      PCT_A19001_003: % Total Population: Population Not in Group Quarters
+      A14001_001:     Households:
+      A14001_002:     Households: Less than $10,000
+      A14001_003:     Households: $10,000 to $14,999
+      A14001_004:     Households: $15,000 to $19,999
+      A14001_005:     Households: $20,000 to $24,999
+      A14001_006:     Households: $25,000 to $29,999
+      A14001_007:     Households: $30,000 to $34,999
+      A14001_008:     Households: $35,000 to $39,999
+      A14001_009:     Households: $40,000 to $44,999
+      A14001_010:     Households: $45,000 to $49,999
+      A14001_011:     Households: $50,000 to $59,999
+      A14001_012:     Households: $60,000 to $74,999
+      A14001_013:     Households: $75,000 to $99,999
+      A14001_014:     Households: $100,000 to $124,999
+      A14001_015:     Households: $125,000 to $149,999
+      A14001_016:     Households: $150,000 to $199,999
+      A14001_017:     Households: $200,000 or More
+      PCT_A14001_002: % Households: Less than $10,000
+      PCT_A14001_003: % Households: $10,000 to $14,999
+      PCT_A14001_004: % Households: $15,000 to $19,999
+      PCT_A14001_005: % Households: $20,000 to $24,999
+      PCT_A14001_006: % Households: $25,000 to $29,999
+      PCT_A14001_007: % Households: $30,000 to $34,999
+      PCT_A14001_008: % Households: $35,000 to $39,999
+      PCT_A14001_009: % Households: $40,000 to $44,999
+      PCT_A14001_010: % Households: $45,000 to $49,999
+      PCT_A14001_011: % Households: $50,000 to $59,999
+      PCT_A14001_012: % Households: $60,000 to $74,999
+      PCT_A14001_013: % Households: $75,000 to $99,999
+      PCT_A14001_014: % Households: $100,000 to $124,999
+      PCT_A14001_015: % Households: $125,000 to $149,999
+      PCT_A14001_016: % Households: $150,000 to $199,999
+      PCT_A14001_017: % Households: $200,000 or More
+      A14006_001:     Median Household Income (In 2017 Inflation Adjusted Dollars)
+      A14007_001:     Median Household Income (In 2017 Inflation Adjusted Dollars):
+      A14007_002:     Median Household Income (In 2017 Inflation Adjusted Dollars): White Alone Householder
+      A14007_003:     Median Household Income (In 2017 Inflation Adjusted Dollars): Black or African American Alone Householder
+      A14007_004:     Median Household Income (In 2017 Inflation Adjusted Dollars): American Indian and Alaska Native Alone  Householder
+      A14007_005:     Median Household Income (In 2017 Inflation Adjusted Dollars): Asian Alone
+      A14007_006:     Median Household Income (In 2017 Inflation Adjusted Dollars): Native Hawaiian and Other Pacific Islander Alone  Householder
+      A14007_007:     Median Household Income (In 2017 Inflation Adjusted Dollars): Some Other Race Alone Householder
+      A14007_008:     Median Household Income (In 2017 Inflation Adjusted Dollars): Two or More Races Householder
+      A14007_009:     Median Household Income (In 2017 Inflation Adjusted Dollars): Hispanic or Latino Householder
+      A14007_010:     Median Household Income (In 2017 Inflation Adjusted Dollars): White Alone Householder, Not Hispanic or Latino
+      A14008_001:     Average Household Income (In 2017 Inflation Adjusted Dollars)
+      A14010_001:     Median Family Income (In 2017 Inflation Adjusted Dollars)
+      A14011_001:     Average Family Income (In 2017 Inflation Adjusted Dollars)
+      A14012_001:     Median Nonfamily Household Income (In 2017 Inflation Adjusted Dollars)
+      A14013_001:     Average Nonfamily Income (In 2017 Inflation Adjusted Dollars)
+      A14014_001:     Median Income for Population 15 Years and Over:
+      A14014_002:     Median Income for Population 15 Years and Over: Male
+      A14014_003:     Median Income for Population 15 Years and Over: Male: Worked Full-Time, Year-Round in the Past 12 Months
+      A14014_004:     Median Income for Population 15 Years and Over: Male: Other
+      A14014_005:     Median Income for Population 15 Years and Over: Female
+      A14014_006:     Median Income for Population 15 Years and Over: Female: Worked Full-Time, Year-Round in the Past 12 Months
+      A14014_007:     Median Income for Population 15 Years and Over: Female: Other
+      A15001_001:     Median Earnings:
+      A15001_002:     Median Earnings: Less than High School Graduate
+      A15001_003:     Median Earnings: High School Graduate (Includes Equivalency)
+      A15001_004:     Median Earnings: Some College or Associate's Degree
+      A15001_005:     Median Earnings: Bachelor's Degree
+      A15001_006:     Median Earnings: Graduate or Professional Degree
+      A15001_007:     Median Earnings: Male
+      A15001_008:     Median Earnings: Male: Less than High School Graduate
+      A15001_009:     Median Earnings: Male: High School Graduate (Includes Equivalency)
+      A15001_010:     Median Earnings: Male: Some College or Associate's Degree
+      A15001_011:     Median Earnings: Male: Bachelor's Degree
+      A15001_012:     Median Earnings: Male: Graduate or Professional Degree
+      A15001_013:     Median Earnings: Female
+      A15001_014:     Median Earnings: Female: Less than High School Graduate
+      A15001_015:     Median Earnings: Female: High School Graduate (Includes Equivalency)
+      A15001_016:     Median Earnings: Female: Some College or Associate's Degree
+      A15001_017:     Median Earnings: Female: Bachelor's Degree
+      A15001_018:     Median Earnings: Female: Graduate or Professional Degree
+      A14015_001:     Median Household Income Occupied Housing Units:
+      A14015_002:     Median Household Income Occupied Housing Units: Owner Occupied
+      A14015_003:     Median Household Income Occupied Housing Units: Renter Occupied
+      A10011_001:     Households:
+      A10011_002:     Households: with Earnings
+      A10011_003:     Households: No Earnings
+      PCT_A10011_002: % Households: with Earnings
+      PCT_A10011_003: % Households: No Earnings
+      A10019_001:     Households:
+      A10019_002:     Households: with Wage or Salary Income
+      A10019_003:     Households: No Wage or Salary Income
+      PCT_A10019_002: % Households: with Wage or Salary Income
+      PCT_A10019_003: % Households: No Wage or Salary Income
+      A10016_001:     Households:
+      A10016_002:     Households: with Self-Employment Income
+      A10016_003:     Households: No Self-Employment Income
+      PCT_A10016_002: % Households: with Self-Employment Income
+      PCT_A10016_003: % Households: No Self-Employment Income
+      A10012_001:     Households:
+      A10012_002:     Households: with Interest, Dividends, or Net Rental Income
+      A10012_003:     Households: No Interest, Dividends, or Net Rental Income
+      PCT_A10012_002: % Households: with Interest, Dividends, or Net Rental Income
+      PCT_A10012_003: % Households: No Interest, Dividends, or Net Rental Income
+      A10017_001:     Households:
+      A10017_002:     Households: with Social Security Income
+      A10017_003:     Households: No Social Security Income
+      PCT_A10017_002: % Households: with Social Security Income
+      PCT_A10017_003: % Households: No Social Security Income
+      A10018_001:     Households:
+      A10018_002:     Households: with Supplemental Security Income (Ssi)
+      A10018_003:     Households: No Supplemental Security Income (Ssi)
+      PCT_A10018_002: % Households: with Supplemental Security Income (Ssi)
+      PCT_A10018_003: % Households: No Supplemental Security Income (Ssi)
+      A10014_001:     Households:
+      A10014_002:     Households: with Public Assistance Income
+      A10014_003:     Households: No Public Assistance Income
+      PCT_A10014_002: % Households: with Public Assistance Income
+      PCT_A10014_003: % Households: No Public Assistance Income
+      A10015_001:     Households:
+      A10015_002:     Households: with Retirement Income
+      A10015_003:     Households: No Retirement Income
+      PCT_A10015_002: % Households: with Retirement Income
+      PCT_A10015_003: % Households: No Retirement Income
+      A10013_001:     Households:
+      A10013_002:     Households: with Other Types of Income
+      A10013_003:     Households: No Other Types of Income
+      PCT_A10013_002: % Households: with Other Types of Income
+      PCT_A10013_003: % Households: No Other Types of Income
+      A14024_001:     Per Capita Income (In 2017 Inflation Adjusted Dollars)
+      A14024A_001:    Per Capita Income (In 2017 Inflation Adjusted Dollars)
+      A14024B_001:    Per Capita Income (In 2017 Inflation Adjusted Dollars)
+      A14024C_001:    Per Capita Income (In 2017 Inflation Adjusted Dollars)
+      A14024D_001:    Per Capita Income (In 2017 Inflation Adjusted Dollars)
+      A14024E_001:    Per Capita Income (In 2017 Inflation Adjusted Dollars)
+      A14024F_001:    Per Capita Income (In 2017 Inflation Adjusted Dollars)
+      A14024G_001:    Per Capita Income (In 2017 Inflation Adjusted Dollars)
+      A14024H_001:    Per Capita Income (In 2017 Inflation Adjusted Dollars)
+      A14024I_001:    Per Capita Income (In 2017 Inflation Adjusted Dollars)
+      A09005_001:     Workers 16 Years and Over:
+      A09005_002:     Workers 16 Years and Over: Car, Truck, or Van
+      A09005_009:     Workers 16 Years and Over: Drove Alone
+      A09005_010:     Workers 16 Years and Over: Carpooled
+      A09005_003:     Workers 16 Years and Over: Public Transportation (Includes Taxicab)
+      A09005_004:     Workers 16 Years and Over: Motorcycle
+      A09005_005:     Workers 16 Years and Over: Bicycle
+      A09005_006:     Workers 16 Years and Over: Walked
+      A09005_007:     Workers 16 Years and Over: Other Means
+      A09005_008:     Workers 16 Years and Over: Worked At Home
+      PCT_A09005_002: % Workers 16 Years and Over: Car, Truck, or Van
+      PCT_A09005_009: % Workers 16 Years and Over: Drove Alone
+      PCT_A09005_010: % Workers 16 Years and Over: Carpooled
+      PCT_A09005_003: % Workers 16 Years and Over: Public Transportation (Includes Taxicab)
+      PCT_A09005_004: % Workers 16 Years and Over: Motorcycle
+      PCT_A09005_005: % Workers 16 Years and Over: Bicycle
+      PCT_A09005_006: % Workers 16 Years and Over: Walked
+      PCT_A09005_007: % Workers 16 Years and Over: Other Means
+      PCT_A09005_008: % Workers 16 Years and Over: Worked At Home
+      A09001_001:     Workers 16 Years and Over:
+      A09001_002:     Workers 16 Years and Over: Did Not Work At Home
+      A09001_003:     Workers 16 Years and Over: Did Not Work At Home: Less than 10 Minutes
+      A09001_004:     Workers 16 Years and Over: Did Not Work At Home: 10 to 19 Minutes
+      A09001_005:     Workers 16 Years and Over: Did Not Work At Home: 20 to 29 Minutes
+      A09001_006:     Workers 16 Years and Over: Did Not Work At Home: 30 to 39 Minutes
+      A09001_007:     Workers 16 Years and Over: Did Not Work At Home: 40 to 59 Minutes
+      A09001_008:     Workers 16 Years and Over: Did Not Work At Home: 60 to 89 Minutes
+      A09001_009:     Workers 16 Years and Over: Did Not Work At Home: 90 or More Minutes
+      A09001_010:     Workers 16 Years and Over: Worked At Home
+      PCT_A09001_002: % Workers 16 Years and Over: Did Not Work At Home
+      PCT_A09001_003: % Workers 16 Years and Over: Did Not Work At Home: Less than 10 Minutes
+      PCT_A09001_004: % Workers 16 Years and Over: Did Not Work At Home: 10 to 19 Minutes
+      PCT_A09001_005: % Workers 16 Years and Over: Did Not Work At Home: 20 to 29 Minutes
+      PCT_A09001_006: % Workers 16 Years and Over: Did Not Work At Home: 30 to 39 Minutes
+      PCT_A09001_007: % Workers 16 Years and Over: Did Not Work At Home: 40 to 59 Minutes
+      PCT_A09001_008: % Workers 16 Years and Over: Did Not Work At Home: 60 to 89 Minutes
+      PCT_A09001_009: % Workers 16 Years and Over: Did Not Work At Home: 90 or More Minutes
+      PCT_A09001_010: % Workers 16 Years and Over: Worked At Home
+
+
+
+
+--------------------------------------------------------------------------------
+Citation and Use of Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* Publications and research reports employing the data
+  must cite it appropriately. The citation should include the following:
+
+	  www.socialexplorer.com
+	  New York City, NY: Social Explorer 2019
+
+
+* Citations should also include the URL for this report:
+
+    http://www.socialexplorer.com/pub/reportdata/HtmlResults.aspx?reportid=R12383874
+
+If you have any questions contact info@socialexplorer.com

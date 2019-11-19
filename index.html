@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+
+   <script src = "prek.js" type = "text/javascript"></script>
+   <script src = "early.js" type = "text/javascript"></script>
+   <script src = "late.js" type = "text/javascript"></script>
+   <script src = "earlylate.js" type = "text/javascript"></script>
+   <script src = "tracts.js" type = "text/javascript"></script>
+   <script src = "countries.js" type = "text/javascript"></script>
+   <script src = "tracts2.js" type = "text/javascript"></script>
+   	<script src="leaflet.groupedlayercontrol.min.js"></script>
+
+
+</head>
+
+<body>
+	<div id="mapid" style ="width:100%; height:100%; position: absolute;"></div>
+	<style>#mapid { width: 100%; height: 100%; position: absolute; }
+.info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
+.legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }</style>
+
+	<script>
+
+		//Basemaps
+
+		var streets = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoiYW1jMjM3NSIsImEiOiJjazJ3MzUzdW0wYm93M2NwbTRkcjg1YWJzIn0.4tSWWxx0gBJPlbUi2GT-mQ'
+	});
+		var grayscale = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.light',
+    accessToken: 'pk.eyJ1IjoiYW1jMjM3NSIsImEiOiJjazJ3MzUzdW0wYm93M2NwbTRkcjg1YWJzIn0.4tSWWxx0gBJPlbUi2GT-mQ'
+	});
+		var dark = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.dark',
+    accessToken: 'pk.eyJ1IjoiYW1jMjM3NSIsImEiOiJjazJ3MzUzdW0wYm93M2NwbTRkcjg1YWJzIn0.4tSWWxx0gBJPlbUi2GT-mQ'
+	});
+//******************************************************************************************
+		var mymap = L.map('mapid', {
+			center: [40.76,-74.01],
+			zoom: 12,
+			layers: [streets]
+		});
+
+//******************************************************************************************
+
+		//Map Styles
+
+		var earlylateMarkerOptions = {
+		    radius: 8,
+		    fillColor: "#bc4873",
+		    color : "#ffffff",
+		    weight: 1,
+		    opacity: 1,
+		    fillOpacity: 0.8
+		};
+
+		var allPreKMarkerOptions = {
+		    radius: 8,
+		    fillColor: "#ffffff",
+		    color : "#ffffff",
+		    weight: 1,
+		    opacity: 1,
+		    fillOpacity: 0.8
+		};
+//******************************************************************************************
+		//Map Declaration
+
+		var earlylateMap = L.geoJson(earlylateData, {
+		    pointToLayer: function (feature, latlng) {
+		        return L.circleMarker(latlng, earlylateMarkerOptions);
+		    }
+		}).addTo(mymap);
+
+		var tractsSP = L.geoJson(tracts2Data, {style:spStyle});		
+		var tractsSM = L.geoJson(tracts2Data, {style:smStyle});
+		var tractsIncome = L.geoJson(tracts2Data, {style:incomeStyle});
+		var tractsCommute = L.geoJson(tracts2Data, {style:commuteStyle});
+		var allPreK = L.geoJson(prekData, {
+			pointToLayer: function (feature, latlng) {
+		        return L.circleMarker(latlng, allPreKMarkerOptions);
+		    }
+		})
+
+
+
+//******************************************************************************************
+		// Adding Maps
+		var baseMaps = {
+			"Streets": streets,
+			"Light": grayscale,
+			"Dark": dark
+
+		};
+		var overlayMaps = {
+			 "Demographic Variables": {
+				"Single Parent Households" : tractsSP,
+				"Single Mother Households" : tractsSM,
+				"Median Household Income": tractsIncome,
+				"Average Commute Time to Work": tractsCommute
+			},
+			"Pre-K For All Locations": {
+				"Pre-Ks with Early Drop Off and Late Pick Up": earlylateMap,
+				"All Locations" : allPreK
+			}
+		};
+		    var options = {
+		      exclusiveGroups: ["Demographic Variables"], //"Pre-K For All Locations"],
+		      // Show a checkbox next to non-exclusive group labels for toggling all
+		      //groupCheckboxes: true,
+		      collapsed : false
+		    };
+
+		    var layerControl = L.control.groupedLayers(baseMaps, overlayMaps, options);
+		    mymap.addControl(layerControl)
+		//L.control.layers(baseMaps, overlayMaps, {collapsed : false}).addTo(mymap);
+		mymap.on('overlayadd', function(e) {
+			earlylateMap.bringToFront();
+		}
+			)
+
+//******************************************************************************************
+		// Legends
+		var spLegend = L.control({position:'bottomleft'});
+		//var smLegend = L.control({position:'bottomleft'});
+		var incomeLegend = L.control({position:'bottomleft'});
+		var commuteLegend = L.control({position:'bottomleft'});
+
+		spLegend.onAdd = function (mymap) {
+		    var div = L.DomUtil.create('div', 'info legend'),
+		        grades = [0, 5, 10, 15, 20],
+		        labels = [],
+		        from, to;
+		    for (var i = 0; i < grades.length; i++) {
+		    	from = grades[i];
+		    	to = grades[i+1];
+		    	labels.push('<i style="background:' + spColor(from + 1) + '"></i> ' +
+				from + '%' + (to ? '&ndash;' + to + '%' : '+'));
+		    }
+
+		    div.innerHTML = labels.join('<br>');
+		    return div;
+		};
+
+		incomeLegend.onAdd = function (mymap) {
+		    var div = L.DomUtil.create('div', 'info legend'),
+		        grades = [0, 20000, 50000, 75000, 100000],
+		        labels = [],
+		        from, to;
+		    for (var i = 0; i < grades.length; i++) {
+		    	from = grades[i];
+		    	to = grades[i+1];
+		    	labels.push('<i style="background:' + incomeColor(from + 1) + '"></i> ' +
+				'$' + from + (to ? '&ndash;' + '$'+to : '+'));
+		    }
+
+		    div.innerHTML = labels.join('<br>');
+		    return div;
+		};
+
+		commuteLegend.onAdd = function (mymap) {
+		    var div = L.DomUtil.create('div', 'info legend'),
+		        grades = [0, 35, 40, 45, 50],
+		        labels = [],
+		        from, to;
+		    for (var i = 0; i < grades.length; i++) {
+		    	from = grades[i];
+		    	to = grades[i+1];
+		    	labels.push('<i style="background:' + commuteColor(from + 1) + '"></i> ' +
+				from + ' min' + (to ? '&ndash;' + to + ' min' : '+'));
+		    }
+
+		    div.innerHTML = labels.join('<br>');
+		    return div;
+		};
+		
+
+		currentLegend = spLegend;
+
+
+		mymap.on('overlayadd', function (eventLayer) {
+	
+		    if (eventLayer.name === 'Single Parent Households') {
+		        mymap.removeControl(currentLegend);
+		        currentLegend = spLegend;
+		        spLegend.addTo(mymap);
+		    } 
+		    else if (eventLayer.name == 'Single Mother Households') {
+		    	mymap.removeControl(currentLegend);
+		    	currentLegend = spLegend;
+		    	spLegend.addTo(mymap);
+		    }
+		    else if(eventLayer.name == 'Average Commute Time to Work') {
+		    	mymap.removeControl(currentLegend);
+		    	currentLegend = commuteLegend;
+		    	commuteLegend.addTo(mymap);
+		    }
+		    else { 
+		        mymap.removeControl(currentLegend);
+		        currentLegend = incomeLegend;
+		        incomeLegend.addTo(mymap);
+		    }
+		});
+
+		// mymap.on('overlayremove', function(eventLayer){
+		//     mymap.removeControl(currentLegend);
+		// });
+		
+//******************************************************************************************
+
+
+		// Functions
+		function spColor(d) {
+		    return d > 20 ? '#bd0026' :
+		           d > 15  ? '#f03b20' :
+		           d > 10  ? '#fd8d3c' :
+		           d > 5  ? '#fecc5c' :
+		           d > 0   ? '#ffffb2' :
+		                      '#FFEDA0';
+		}
+
+		function incomeColor(d) {
+		    return d > 100000 ? '#bd0026' :
+		           d > 75000  ? '#f03b20' :
+		           d > 50000  ? '#fd8d3c' :
+		           d > 20000  ? '#fecc5c' :
+		           d > 0   ? '#ffffb2' :
+		                      '#FFEDA0';
+		}
+		function commuteColor(d) {
+		    return d > 50 ? '#bd0026' :
+		           d > 45  ? '#f03b20' :
+		           d > 40  ? '#fd8d3c' :
+		           d > 35  ? '#fecc5c' :
+		           d > 0   ? '#ffffb2' :
+		                      '#FFEDA0';
+		}
+
+		function spStyle(feature) {
+		    return {
+		        fillColor: spColor(feature.properties.PCT_SE_A10009_005),
+		        weight: 0.5,
+		        opacity: 1,
+		        color: 'white',
+		        fillOpacity: 0.8
+		    };
+		}
+
+		function smStyle(feature) {
+		    return {
+		        fillColor: spColor(feature.properties.PCT_SE_A10009_007),
+		        weight: 0.5,
+		        opacity: 1,
+		        color: 'white',
+		        fillOpacity: 0.8
+		    };
+		}
+
+		function incomeStyle(feature) {
+		    return {
+		        fillColor: incomeColor(feature.properties.SE_A14006_001),
+		        weight: 0.5,
+		        opacity: 1,
+		        color: 'white',
+		        fillOpacity: 0.8
+		    };
+		}
+		function commuteStyle(feature) {
+		    return {
+		        fillColor: commuteColor(feature.properties.commute_avg),
+		        weight: 0.5,
+		        opacity: 1,
+		        color: 'white',
+		        fillOpacity: 0.8
+		    };
+		}
+		//******************************************************************************************
+
+		// Notes
+
+		// 'PCT_SE_A10009_005' is percentage of households with a single parent
+		// 'PCT_SE_A10009_007' is percentage of households with a single mom
+		// 'SE_A14006_001' is median household income
+		// commute_avg is average commute time in minutes
+
+	</script>
+</body>
+
+</html>
