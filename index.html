@@ -52,8 +52,8 @@
 //******************************************************************************************
 		var mymap = L.map('mapid', {
 			center: [40.76,-74.01],
-			zoom: 12,
-			layers: [streets]
+			zoom: 11,
+			layers: [grayscale]
 		});
 
 //******************************************************************************************
@@ -61,19 +61,19 @@
 		//Map Styles
 
 		var earlylateMarkerOptions = {
-		    radius: 8,
+		    radius: 5,
 		    fillColor: "#bc4873",
 		    color : "#ffffff",
-		    weight: 1,
+		    weight: 0.5,
 		    opacity: 1,
 		    fillOpacity: 0.8
 		};
 
 		var allPreKMarkerOptions = {
-		    radius: 8,
-		    fillColor: "#ffffff",
+		    radius: 5,
+		    fillColor: "#f09595",
 		    color : "#ffffff",
-		    weight: 1,
+		    weight: 0.5,
 		    opacity: 1,
 		    fillOpacity: 0.8
 		};
@@ -101,10 +101,9 @@
 //******************************************************************************************
 		// Adding Maps
 		var baseMaps = {
-			"Streets": streets,
 			"Light": grayscale,
-			"Dark": dark
-
+			"Dark": dark,
+			"Streets": streets
 		};
 		var overlayMaps = {
 			 "Demographic Variables": {
@@ -122,9 +121,9 @@
 		      exclusiveGroups: ["Demographic Variables"], //"Pre-K For All Locations"],
 		      // Show a checkbox next to non-exclusive group labels for toggling all
 		      //groupCheckboxes: true,
-		      collapsed : false
+		      collapsed : false,
+		      position: 'topleft'
 		    };
-
 		    var layerControl = L.control.groupedLayers(baseMaps, overlayMaps, options);
 		    mymap.addControl(layerControl)
 		//L.control.layers(baseMaps, overlayMaps, {collapsed : false}).addTo(mymap);
@@ -225,67 +224,67 @@
 
 		// Functions
 		function spColor(d) {
-		    return d > 20 ? '#bd0026' :
-		           d > 15  ? '#f03b20' :
-		           d > 10  ? '#fd8d3c' :
-		           d > 5  ? '#fecc5c' :
-		           d > 0   ? '#ffffb2' :
-		                      '#FFEDA0';
+		    return d > 20 ? '#08519c' :
+		           d > 15  ? '#3182bd' :
+		           d > 10  ? '#6baed6' :
+		           d > 5  ? '#9ecae1' :
+		           d > 0   ? '#c6dbef' :
+		                      '#eff3ff';
 		}
 
 		function incomeColor(d) {
-		    return d > 100000 ? '#bd0026' :
-		           d > 75000  ? '#f03b20' :
-		           d > 50000  ? '#fd8d3c' :
-		           d > 20000  ? '#fecc5c' :
-		           d > 0   ? '#ffffb2' :
-		                      '#FFEDA0';
+		    return d > 100000 ? '#08519c' :
+		           d > 75000  ? '#3182bd' :
+		           d > 50000  ? '#6baed6' :
+		           d > 20000  ? '#9ecae1' :
+		           d > 0   ? '#c6dbef' :
+		                      '#eff3ff';
 		}
 		function commuteColor(d) {
-		    return d > 50 ? '#bd0026' :
-		           d > 45  ? '#f03b20' :
-		           d > 40  ? '#fd8d3c' :
-		           d > 35  ? '#fecc5c' :
-		           d > 0   ? '#ffffb2' :
-		                      '#FFEDA0';
+		    return d > 50 ? '#08519c' :
+		           d > 45  ? '#3182bd' :
+		           d > 40  ? '#6baed6' :
+		           d > 35  ? '#9ecae1' :
+		           d > 0   ? '#c6dbef' :
+		                      '#eff3ff';
 		}
 
 		function spStyle(feature) {
 		    return {
 		        fillColor: spColor(feature.properties.PCT_SE_A10009_005),
-		        weight: 0.5,
+		        weight: 0.3,
 		        opacity: 1,
 		        color: 'white',
-		        fillOpacity: 0.8
+		        fillOpacity: 0.9
 		    };
 		}
 
 		function smStyle(feature) {
 		    return {
 		        fillColor: spColor(feature.properties.PCT_SE_A10009_007),
-		        weight: 0.5,
+		        weight: 0.3,
 		        opacity: 1,
 		        color: 'white',
-		        fillOpacity: 0.8
+		        fillOpacity: 0.9
 		    };
 		}
 
 		function incomeStyle(feature) {
 		    return {
 		        fillColor: incomeColor(feature.properties.SE_A14006_001),
-		        weight: 0.5,
+		        weight: 0.3,
 		        opacity: 1,
 		        color: 'white',
-		        fillOpacity: 0.8
+		        fillOpacity: 0.9
 		    };
 		}
 		function commuteStyle(feature) {
 		    return {
 		        fillColor: commuteColor(feature.properties.commute_avg),
-		        weight: 0.5,
+		        weight: 0.3,
 		        opacity: 1,
 		        color: 'white',
-		        fillOpacity: 0.8
+		        fillOpacity: 0.9
 		    };
 		}
 		//******************************************************************************************
